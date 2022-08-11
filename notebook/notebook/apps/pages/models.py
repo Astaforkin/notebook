@@ -13,7 +13,7 @@ class Page(models.Model):
         return self.page_title
 
     def was_published_recently(self):
-        return self.pub_date >= (timezone.now() - datetime.timedelta(days= 7))
+        return self.pub_date >= (timezone.now())
 
     class Meta:
         verbose_name = 'Запись'

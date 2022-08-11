@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Записи{% endblock %}
+
+{% block content %}
+
+    {% if latest_pages_list %}
+
+        {% for a in latest_pages_list %}
+            <a href="{% url 'pages:detail' a.id %}">{{a.page_title}}</a>
+        {% endfor %}
+
+    {% else %}
+        Записи не найдены
+    {% endif %}
+
+{% endblock %}

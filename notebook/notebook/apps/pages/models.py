@@ -6,8 +6,8 @@ from django.utils import timezone
 
 
 class Page(models.Model):
-    page_title = models.TextField('текст записи')
-    pub_date = models.DateTimeField('дата записи')
+    page_title = models.TextField("текст записи")
+    pub_date = models.DateTimeField("дата записи")
 
     def __str__(self):
         return self.page_title
@@ -16,5 +16,5 @@ class Page(models.Model):
         return self.pub_date >= (timezone.now())
 
     class Meta:
-        verbose_name = 'Запись'
-        verbose_name_plural = 'Записи'
+        verbose_name = "Запись"
+        verbose_name_plural = "Записи"
